@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+</head>
+<body>
+    <!-- 1) Дан массив const arr = [1, 5, 7, 9] с помощью Math.min и spread оператора, найти минимальное число в массиве, решение задание должно состоять из одной строки -->
+    <script>
+        const arr = [1, 5, 7, 9]
+        console.log(Math.min(...arr));
+// console.log("");
+    </script>
+<!-- 2) Напишите функцию createCounter, которая создает счетчик и возвращает объект с двумя методами: increment и decrement. Метод increment должен увеличивать значение счетчика на 1, а метод decrement должен уменьшать значение счетчика на 1. Значение счетчика должно быть доступно только через методы объекта, а не напрямую. -->
+<script>
+    const createCounter = () => {
+        let count = 0;
+        return{
+            increment: () => ++ count,
+            decrement: () => -- count,
+        } 
+    }
+    const counter1 = createCounter();
+console.log(counter1.increment());
+console.log(counter1.increment());
+console.log(counter1.increment());
+console.log(counter1.increment());
+console.log(counter1.increment());
+
+const counter2 = createCounter();
+console.log(counter2.decrement());
+console.log(counter2.decrement());
+console.log(counter2.decrement());
+console.log(counter2.decrement());
+console.log(counter2.decrement());
+</script>
+<!-- 3) Напишите рекурсивную функцию findElementByClass, которая принимает корневой элемент дерева DOM и название класса в качестве аргументов и возвращает первый найденный элемент с указанным классом в этом дереве. -->
+
+<section id="root" class="my-class">
+    <div class="my-class__image">
+        <img src="img/about.svg" alt="my class photo">
+    </div>
+    <div class="my-class__content">
+        <div class="my-class__info">
+            <h1 class="my-class__title">LOREM</h1>
+            <h2 class="my-class__subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, rerum?
+                <span>LOREM</span>
+            </h2>
+        </div>
+        <script src="script.js">
+        </script>
+</body>
+</html>
