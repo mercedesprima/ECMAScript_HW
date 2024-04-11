@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework3</title>
+</head>
+<body>
+   <script>
+// Управление персоналом компании
+class Employee{
+    constructor(name) {
+        this.name = name;
+    }
+    displayInfo(name){
+        console.log(`Сотрудник ${this.name}`);
+    }
+}
+
+class Manager extends Employee{
+    constructor(name, department) {
+        super(name);
+        this. department = department;
+    }
+displayInfo(name, department) {
+    console.log(`Сотрудник ${this.name} из отдела ${this.department} `);
+}
+}
+
+const employee = new Employee("John Smith");
+employee.displayInfo();
+
+const manager = new Manager("Jane Doe", "Sales");
+manager.displayInfo();
+
+// Управление списком заказов
+
+class Product {
+constructor(name, price) {
+this.name = name;
+this.price = price;
+}
+}
+class Order{
+    constructor(orderNumber, products) {
+        this.orderNumber = orderNumber;
+        this.products = [];
+        this.totalPrice = 0;
+    }
+    addProduct(product, price){
+this.products.push(product);
+    }
+    getTotalPrice(){
+        for (let item in this.products) {
+            this.totalPrice += this.products[item].price; 
+            }
+return this.totalPrice;
+    }
+}
+// Пример использования класса
+
+const order = new Order(12345);
+const product1 = new Product("Phone", 500);
+order.addProduct(product1);
+const product2 = new Product("Headphones", 100);
+order.addProduct(product2);
+console.log(order.getTotalPrice()); // Вывод: 600
+   </script> 
+</body>
+</html>
