@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework2</title>
+</head>
+<body>
+    <script>
+// Задание 1: ""Управление библиотекой книг""
+// Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
+
+class Book{
+    // static bookName = "MyBook"
+    constructor(title, author, pages) {
+       this.title = title;
+       this.author = author;
+       this.pages = pages;  
+    }
+    displayInfo(){
+        console.log(`Книга: ${this.title}, автор: ${this.author} , количество страниц: ${this. pages} стр.`);
+    }
+}
+const book1 = new Book('Молодые львы', 'Ирвинг Шоу', 386);
+book1.displayInfo();
+
+// Задание 2: "Управление списком студентов"
+
+class Student{
+  constructor(name, age, grade) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+  }  
+  displayInfo(){
+    console.log(`${this.name}, ${this.age}, ${this.grade}`);
+  }
+}
+
+const student1 = new Student("John Smith", 16,"10th grade");
+student1.displayInfo();
+
+const student2 = new Student("Jane Doe", 17, "11th grade");
+student2.displayInfo();
+
+    </script>
+</body>
+</html>
